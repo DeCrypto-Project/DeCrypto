@@ -1,0 +1,29 @@
+{
+  "name": "decrypto",
+  "version": "1.0.0",
+  "description": "DeCrypto",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeCrypto-Project/DeCrypto.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DeCrypto-Project/DeCrypto/issues"
+  },
+  "homepage": "https://github.com/DeCrypto-Project/DeCrypto#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "config": "^3.3.7",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16",
+    "path": "^0.12.7",
+    "react": "^18.1.0",
+    "react-router-dom": "^6.3.0"
+  }
+}
