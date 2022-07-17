@@ -3,7 +3,7 @@ To sync your project run these in terminal:
 ___________________________________________
 'git pull'
 'npm install'
-
+'git checkout -b '{your-new-branch-name}'
 
 To run the project:
 ___________________
@@ -19,3 +19,4 @@ then to run client side open another terminal and run:
 navigate to http://localhost:3000/home
 
 * use ESlint in your text editor/IDE on every save for easy coding.
+* use nodemon to rerun server after each change.

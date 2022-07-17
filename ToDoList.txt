@@ -1,0 +1,30 @@
+להיום:
+חלוקה לתת משימות ומי עושה אותם + לבחור פרונט אנד
+
+בכללי חשבתי:
+1. חיבור הפרונט לבק אנד (3 גרונות)
+2. חיבור הסקריפטים הצדדים מaws לשרת (1-2 גורונות)
+3. עשיית מנהלות ומסמכים וכאלה (גרון בודד)
+
+
+1. Connecting the front-end to the back-end
+2. Connect the app & timed python scripts to aws
+3. Documents Etc...
+
+1.
+a) create routes for relevant buttons
+b) add some crypto related content to the site
+c) manage User-Profile in relations to timed jobs
+d) add DB
+*e) add cache layer (redis)
+*f) dockerize app
+
+2.
+a) create infrastructure to deploy nodejs app
+b) create relevant infrastructure for executing python scripts timed jobs
+
+3.
+a) talk to ofer and calm him.
+b) see what documents we need to present.
+c) make cardboard logo or some shit idk.
+d) do any other requirements sent by ofer/MTA.
