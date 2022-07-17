@@ -1,0 +1,21 @@
+
+To sync your project run these in terminal:
+___________________________________________
+'git pull'
+'npm install'
+
+
+To run the project:
+___________________
+
+To run the server, inside the root directory run:
+'npm start'
+
+then to run client side open another terminal and run:
+'cd client'
+'npm start'
+
+
+navigate to http://localhost:3000/home
+
+* use ESlint in your text editor/IDE on every save for easy coding.
