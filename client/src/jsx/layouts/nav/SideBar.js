@@ -170,12 +170,11 @@ class SideBar extends Component {
         <PerfectScrollbar className="deznav-scroll">
 			<div className="main-profile">
 				<div className="image-bx">
-					<img src={profile} alt="" />
-					<Link to={"#"}><i className="fa fa-cog" aria-hidden="true"></i></Link>
-				</div>	
-				<h5 className="mb-0 fs-20 text-black "><span className="font-w400">Hello,</span> Marquez</h5>
-				<p className="mb-0 fs-14 font-w400">marquezzzz@mail.com</p>
-			</div>
+                  <Link to="/app-profile"><img src={profile} alt="" /></Link>
+				</div>
+				<h5 className="mb-0 fs-20 text-black "><span className="font-w400">Hello,</span> Nir</h5>
+				<p className="mb-0 fs-14 font-w400">nirjacob@mail.com</p>
+            </div>
           <MM className="metismenu" id="menu">
 			<li className="nav-label first">Main Menu</li>
             <li className={`${dashBoard.includes(path) ? "mm-active" : ""}`}>
@@ -184,26 +183,14 @@ class SideBar extends Component {
 					<span className="nav-text">Dashboard</span>
 				</Link>
 				<ul >
-					<li><Link className={`${path === "" ? "mm-active" : ""}`} to="/">Dashboard </Link></li>
-					{/*<li><Link className={`${path === "dashboard-light" ? "mm-active" : ""}`} to="/dashboard-light">Dashboard Light</Link></li>*/}
-					<li><Link className={`${path === "wallet" ? "mm-active" : ""}`} to="/my-wallets">Wallet</Link></li>
-					<li><Link className={`${path === "transactions" ? "mm-active" : ""}`} to="/transactions"> Transactions</Link></li>
-					<li><Link className={`${path === "coin-details" ? "mm-active" : ""}`} to="/coin-details"> Coin Details</Link> </li>
-					<li><Link className={`${path === "portofolio" ? "mm-active" : ""}`} to="/portofolio">Portofolio</Link></li>
-					<li><Link className={`${path === "market-capital" ? "mm-active" : ""}`} to="/market-capital">Market Capital</Link></li>						
-				</ul>
-            </li>
-			<li className="nav-label">Apps</li>
-            <li className={`${app.includes(path) ? "mm-active" : ""}`}>
-              <Link className="has-arrow ai-icon" to="#" >
-                <i className="flaticon-077-menu-1"></i>
-                <span className="nav-text">Apps</span>
-              </Link>
-              <ul >
-                <li>
-					<Link className={`${path === "app-profile" ? "mm-active" : ""}`}  to="/app-profile">Profile</Link>
-                </li>
-              </ul>
+                    <li><Link className={`${path === "portofolio" ? "mm-active" : ""}`} to="/portofolio">Portofolio</Link></li>
+                    <li><Link className={`${path === "app-profile" ? "mm-active" : ""}`}  to="/app-profile">Profile</Link></li>
+                  <li><Link className={`${path === "" ? "mm-active" : ""}`} to="/">Dashboard(WIP)</Link></li>
+                  <li><Link className={`${path === "wallet" ? "mm-active" : ""}`} to="/my-wallets">Wallet(WIP)</Link></li>
+                  <li><Link className={`${path === "market-capital" ? "mm-active" : ""}`} to="/market-capital">Market Capital(WIP)</Link></li>
+                    <li><Link className={`${path === "transactions" ? "mm-active" : ""}`} to="/transactions"> Transactions(WIP)</Link></li>
+                    <li><Link className={`${path === "coin-details" ? "mm-active" : ""}`} to="/coin-details"> Coin Details(WIP)</Link> </li>
+                </ul>
             </li>
             <li className={`${charts.includes(path) ? "mm-active" : ""}`}>
             </li>
