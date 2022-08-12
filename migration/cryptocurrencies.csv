@@ -1,0 +1,101 @@
+Rank,Name,Symbol,Price,Market cap
+1,Bitcoin,BTC,"$21,314.23","$406,890,782,123"
+2,Ethereum,ETH,"$1,185.52","$144,026,107,588"
+3,Tether,USDT,$0.9996,"$66,203,826,482"
+4,USD Coin,USDC,$1,"$56,055,591,727"
+5,Binance Coin,,$237.15,"$38,721,134,621"
+6,Binance USD,BUSD,$1,"$18,577,828,847"
+7,XRP,XRP,$0.3384,"$16,359,305,445"
+8,Cardano,ADA,$0.4718,"$16,129,329,413"
+9,Solana,,$37.04,"$12,790,478,531"
+10,Dai Stablecoin,DAI,$1,"$10,226,677,513"
+11,Dogecoin,DOGE,$0.0681,"$9,036,073,085"
+12,TRON,TRX,$0.0688,"$7,003,525,581"
+13,Polkadot,DOT,$7.06,"$6,969,050,952"
+14,Shiba Inu,SHIB,$0.0000113,"$6,663,336,748"
+15,Wrapped Bitcoin,WBTC,"$21,299.13","$6,072,467,159"
+16,Unus Sed,LEO,$5.8,"$5,537,226,747"
+17,Avalanche,AVAX,$19.34,"$5,477,257,947"
+18,Uniswap,UNI,$6.23,"$4,574,765,062"
+19,Polygon,MATIC,$0.5711,"$4,572,685,680"
+20,FTX Token,FTT,$26.36,"$4,292,314,009"
+21,Litecoin,LTC,$54.45,
+22,OKB,OKB,$12.72,
+23,Cronos,CRO,$0.1224,
+24,ChainLink,LINK,$6.32,
+25,Stellar,XLM,$0.1116,
+26,NEAR Protocol,NEAR,$3.66,
+27,Monero,XMR,$124.19,
+28,Algorand,ALGO,$0.3183,
+29,Ethereum Classic,ETC,$15.56,
+30,Bitcoin Cash,BCH,$110.09,
+31,Cosmos,ATOM,$8.77,
+32,Vechain ,VET,$0.024,
+33,Flow,FLOW,$1.67,
+34,Internet Computer,ICP,$6.66,
+35,Decentraland,MANA,$0.8842,
+36,TrueUSD,TUSD,$1,
+37,The Sandbox,SAND,$1.18,
+38,ApeCoin,APE,$4.89,
+39,Tezos,XTZ,$1.61,
+40,Hedera Hashgraph,HBAR,$0.0663,
+41,Filecoin,FIL,$5.64,
+42,Elrond,EGLD,$55.21,
+43,Theta,THETA,$1.24,
+44,Axie Infinity,AXS,$14.73,
+45,Helium,HNT,$9.56,
+46,Aave,AAVE,$80.49,
+47,Quant,QNT,$87.55,
+48,Bitcoin SV,BSV,$55.19,
+49,EOS,EOS,$1.02,
+50,Zcash,ZEC,$65.21,
+51,PancakeSwap,CAKE,$3.17,
+52,Maker,MKR,$963.31,
+53,Pax Dollar,USDP,$0.9978,
+54,KuCoin Token,KCS,$9.43,
+55,BitTorrent(new),BTT,$0.0000009114,
+56,MIOTA,IOTA,$0.2896,
+57,THORChain,RUNE,$2.36,
+58,eCash,XEC,$0.00004085,
+59,Luna Classic,LUNC,$0.000111,
+60,Huobi Token,HT,$4.34,
+61,Graph,GRT,$0.1027,
+62,Fantom,FTM,$0.2722,
+63,Klaytn,KLAY,$0.2374,
+64,Neo,NEO,$9.25,
+65,Basic Attention,BAT,$0.4197,
+66,Chiliz,CHZ,$0.1024,
+67,PAX Gold,PAXG,"$1,738.76",
+68,Green Metaverse,GMT,$0.9691,
+69,Waves,WAVES,$5.27,
+70,Stacks,STX,$0.4178,
+71,Bitkub Coin,KUB,$2.97,
+72,Loopring,LRC,$0.4003,
+73,Curve,CRV,$0.9774,
+74,Zilliqa,ZIL,$0.04,
+75,Dash,DASH,$47.78,
+76,TerraClassicUSD,USTC,$0.0497,
+77,Verasity,VRA,$0.004882,
+78,Enjin Coin,ENJ,$0.543,
+79,Gatechain Token,GT,$3.92,
+80,Luna,LUNA,$2.22,
+81,Kusama,KSM,$51.52,
+82,Celo,CELO,$0.9351,
+83,Kava,KAVA,$1.85,
+84,Gemini Dollar,GUSD,$1,
+85,Mina Protocol,MINA,$0.6802,
+86,Compound,COMP,$55.02,
+87,Amp,AMP,$0.009319,
+88,Convex Finance,CVX,$6.05,
+89,Arweave,AR,$11.58,
+90,Gala,GALA,$0.0539,
+91,1inch Token,1INCH,$0.6704,
+92,NEM,XEM,$0.0413,
+93,Holo,HOT,$0.002123,
+94,Threshold Network,T,$0.0368,
+95,Nexo,NEXO,$0.6272,
+96,XDC Network,XDC,$0.027,
+97,Decred,DCR,$22.96,
+98,WEMIX,WEMIX,$2.59,
+99,NEST Protocol,NEST,$0.0312,
+100,Qtum,QTUM,$2.98,
