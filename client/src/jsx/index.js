@@ -276,7 +276,6 @@ const Markup = () => {
         </div>
         {!pagePath && <Footer />}
       </div>
-      <Setting />
 	  <ScrollToTop />
     </>
   );

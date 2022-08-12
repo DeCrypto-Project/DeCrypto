@@ -1,8 +1,0 @@
-{
-  "extends": "aura",
-  "globals": {
-    "globalConfig": "readonly",
-    "reporter": "readonly"
-  },
-  "env": {"jest": true}
-}

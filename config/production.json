@@ -1,4 +1,10 @@
 {
-  "port": 8080,
-
+  "Db": {
+    "host": "localhost",
+    "user": "root",
+    "port": 3306,
+    "db": "test",
+    "pass": ""
+  },
+  "port": 8080
 }

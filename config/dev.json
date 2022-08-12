@@ -1,3 +1,10 @@
 {
+  "Db": {
+    "host": "localhost",
+    "user": "root",
+    "port": 3306,
+    "db": "test",
+    "pass": "P@ss1234"
+  },
   "port": 8080
 }

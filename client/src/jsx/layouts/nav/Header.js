@@ -125,11 +125,6 @@ const Header = ({ onNote }) => {
 			<div className="d-flex align-items-center flex-wrap mr-auto">
 				<h5 className="dashboard_bar">Dashboard</h5>
 			</div>
-			<div className="d-flex align-items-center">
-				<Link to={"#"} className="btn btn-xs btn-primary light mr-1">Today</Link>
-				<Link to={"#"} className="btn btn-xs btn-primary light mr-1">Month</Link>
-				<Link to={"#"} className="btn btn-xs btn-primary light">Year</Link>
-			</div>
 		</div>
 		
       </div>
