@@ -4,13 +4,12 @@
   "Db": {
     "host": "localhost",
     "user": "root",
-    "pass": "Newquickgod123",
+    "pass": "",
     "port": 3306,
     "database": "future_advisor"
   },
   "PortfolioServiceServer": {
     "host": "localhost",
-    "port": 5000,
-    "algorithm": "GiniWithML"
+    "port": 5000
   }
 }

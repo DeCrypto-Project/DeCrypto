@@ -2,7 +2,7 @@ const config = require('config')
 const mysql = require('../utils/mysql')
 const axios = require('axios');
 
-const { host, port, algorithm} = config.PortfolioServiceServer;
+const { host, port} = config.PortfolioServiceServer;
 
 const getPortfolioByID = async (id) => {
   return (await mysql.runQuery('SELECT * FROM `future_advisor`.`portfolios` WHERE portfolio_id=?;', [id]))[0]
@@ -17,7 +17,8 @@ const savePortfolioToDb = async (userId,userPortfolio) => {
     return;
 }
 
-const calculatePortfolioFromService = async (riskScore, amountToInvest) => {
+const calculatePortfolioFromService = async (params) => {
+    const {riskScore, amountToInvest,algorithm} = params;
     return await axios.get(`http://${host}:${port}/${algorithm}?riskScore=${riskScore}&amountToInvest=${amountToInvest}`);
 };
 

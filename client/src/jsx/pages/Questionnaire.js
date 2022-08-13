@@ -4,7 +4,7 @@ import PageTItle from "../layouts/PageTitle";
 import Accordion from "react-bootstrap/Accordion";
 import Select from "react-select";
 import {saveQuestionnaire,calculateQuestionnaireAnswers} from "../../services/QuestionnaireService";
-import {questions,NUMBER_OF_QUESTIONS} from "../constants/questionnaireQuestions";
+import {questions,NUMBER_OF_QUESTIONS,algorithms} from "../constants/questionnaireQuestions";
 import swal from "sweetalert";
 import BouncingDotsLoader from "../components/Forms/Loading/Loading";
 import { calculateUserPortfolio, savePortfolio} from "../../services/PortfolioService";
@@ -17,6 +17,8 @@ const Questionnaire = () => {
     let history = useHistory();
     const [answers,setAnswers] = useState(new Array(NUMBER_OF_QUESTIONS));
     const [submittingQuestionnaire,setSubmittingQuestionnaire] = useState(false);
+    const [chosenAlgorithm,setChosenAlgorithm] = useState("");
+    const [chosenInvestmentAmount,setChosenInvestmentAmount] = useState("");
 
     const setAnswer = (ans,index) => {
         const newAnswers = [...answers];
@@ -24,15 +26,20 @@ const Questionnaire = () => {
         setAnswers(newAnswers);
     }
 
+    const setInvestmentAmount = async (e) => {
+        setChosenInvestmentAmount(e.target.value);
+    }
+
     const SubmitQuestionnaire = async () => {
         setSubmittingQuestionnaire(true);
-        if(answers.includes(undefined)){
+        const isPositiveNumber = /^\d+$/.test(chosenInvestmentAmount);
+        if(answers.includes(undefined)|| chosenAlgorithm===""||!isPositiveNumber){
             setSubmittingQuestionnaire(false);
             return null;
         }
         const questionnaireAnswers = calculateQuestionnaireAnswers(answers);
         await saveQuestionnaire({userId: 1,questionnaireAnswers})
-        const userPortfolio = await calculateUserPortfolio(questionnaireAnswers.totalScore,100000)
+        const userPortfolio = await calculateUserPortfolio(questionnaireAnswers.totalScore,chosenInvestmentAmount,chosenAlgorithm)
         await savePortfolio({userId: 1,userPortfolio:userPortfolio.data})
         return true;
     }
@@ -49,6 +56,17 @@ const Questionnaire = () => {
                         </Card.Text>
                     </Card.Header>
                     <Card.Body>
+                        <div className="basic-form">
+                            <form action="#">
+                                <div className="input-group mb-5">
+                                    <div className="input-group-prepend">
+                                        <span className="input-group-text">Please enter your desired investment amount in</span>
+                                        <span className="input-group-text">$</span>
+                                    </div>
+                                    <input type="text" className="form-control" placeholder="Amount" onChange={setInvestmentAmount}/>
+                                </div>
+                            </form>
+                        </div>
                         <Accordion
                             className="accordion accordion-rounded-stylish accordion-gradient"
                             defaultActiveKey="0"
@@ -82,6 +100,30 @@ const Questionnaire = () => {
                                     />
                                 </div>
                             ))}
+                            <Accordion.Toggle
+                                as={Card.Text}
+                                className={`accordion__header accordion__header--primary`}
+                            >
+                            <span className="accordion__header--text">{'Please choose desired algorithm'}</span>
+                            </Accordion.Toggle>
+                            <Select
+                                defaultValue
+                                onChange={(ans)=>{setChosenAlgorithm(ans.value)}}
+                                options={algorithms}
+                                showContent="true"
+                                open="true"
+                                className="my-react-select-container"
+                                theme={theme => ({
+                                    ...theme,
+                                    borderRadius: 0,
+                                    colors: {
+                                        ...theme.colors,
+                                        primary25: '#6418c3',
+                                        primary: 'black',
+
+                                    },
+                                })}
+                            />
                         </Accordion>
                         <div className="d-flex justify-content-center">
                             <div className="sweetalert mt-4">

@@ -13,7 +13,8 @@ const getPortfolio = async (req, res, next) => {
 
 const calculatePortfolio = async (req, res, next) => {
     try {
-      const result = await calculatePortfolioFromService(req.params.riskScore,req.params.amountToInvest);
+const {riskScore, amountToInvest,algorithm} = req.body.params;
+      const result = await calculatePortfolioFromService({riskScore, amountToInvest,algorithm})
       res.status(200).send(result.data);
     } catch (err) {
       return next(err)

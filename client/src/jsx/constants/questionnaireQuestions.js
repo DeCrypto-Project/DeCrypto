@@ -1,4 +1,10 @@
 export const NUMBER_OF_QUESTIONS = 12;
+export const algorithms = [
+    { value: "Markowitz", label: "Markowitz Algorithm" },
+    { value: "Gini", label: "Gini Algorithm"},
+    { value: "GiniWithML", label: "Gini Algorithm with Machine Learning"},
+];
+
 const ans_O1 = [
     { value: 1, label: "Income"},
     { value: 2, label: "Growth"},
@@ -57,10 +63,10 @@ const ans_O9 = [
     { value: 0,label: "I would immediately change to investment options that are more stable"},
 ];
 const ans_10 = [
-    { value: 0,  label: "R5,000 or less" },
-    { value: 4,  label: "R10,000"},
-    { value: 7,  label: "R5,000"},
-    { value: 10, label: "R20,000"},
+    { value: 0,  label: "$5,000 or less" },
+    { value: 4,  label: "$10,000"},
+    { value: 7,  label: "$5,000"},
+    { value: 10, label: "$20,000"},
     { value: 14, label: "It is unlikely I will move my money even if my investment falls in value."},
 ];
 const ans_11 = [
@@ -106,7 +112,7 @@ export const questions = [
         options: ans_O6,
     },
     {
-        title: "Imagine you have invested R100,000. Which of the five scenarios below would you want for your\n" +
+        title: "Imagine you have invested $100,000. Which of the five scenarios below would you want for your\n" +
             "investment portfolio?",
         options: ans_O7,
     },
@@ -116,7 +122,7 @@ export const questions = [
         options: ans_O8,
     },
     {
-        title: "Imagine your adviser has invested R100,000 of your money and it’s fallen in value to R80,000. Assuming that this happens at an early stage of your intended investment period, how would you react to this R20,000 loss?",
+        title: "Imagine your adviser has invested $100,000 of your money and it’s fallen in value to $80,000. Assuming that this happens at an early stage of your intended investment period, how would you react to this $20,000 loss?",
         options: ans_O9,
     },
     {
