@@ -1,16 +1,10 @@
-const mysql = require('../utils/mysql');
-const { parseCSV } = require('../utils/csvParser');
-const currency = () => {
-    try {
-        const cryptocurrencies = require('../migration/cryptocurrencies.csv');
+const config = require('config')
+const mysql = require('../utils/mysql')
 
-        const currency = parseCSV(cryptocurrencies)
-        Promise.all(currenciesDb.map(async (currency) => {
-             return mysql.runQuery('INSERT INTO `cryptocurrencies`.`cryptocurrencies` (name,symbol,price,market_cap) VALUES(?,?,?,?)', [currency.name, currency.symbol,currency.price,currency.market_cap])
-        }))
-    } catch (error) {
-        console.error(`Error migrating: ${error.message}`);
-    }
-    console.log('Done!');
-};
+const getPortfolio = async (id) => {
+  return (await mysql.runQuery('SELECT * FROM `future_advisor`.`portfolios` WHERE portfolio_id=?;', [id]))[0]
+}
 
+module.exports = {
+  getPortfolio
+}

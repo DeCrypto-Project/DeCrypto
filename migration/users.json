@@ -1,0 +1,18 @@
+﻿[
+    {
+        "id": "1",
+        "first_name": "Shimi",
+        "last_name": "Xiaomi",
+        "email": "'clean@cleaner.com'",
+        "temp_pass": "easy",
+        "taken_questionnaire": 1
+    },
+    {
+        "id": "2",
+        "first_name": "Salof",
+        "last_name": "Vebanav",
+        "email": "'kubana@yemen.com'",
+        "temp_pass": "walla",
+        "taken_questionnaire": 0
+    }
+]

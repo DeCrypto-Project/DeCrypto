@@ -7,10 +7,14 @@ import {calculateQuestionnaireAnswers} from "../../services/QuestionnaireService
 import {questions,NUMBER_OF_QUESTIONS} from "../constants/questionnaireQuestions";
 import swal from "sweetalert";
 import BouncingDotsLoader from "../components/Forms/Loading/Loading";
+import { calculateUserPortfolio, savePortfolio} from "../../services/PortfolioService";
+import { useHistory } from "react-router-dom";
+
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 const Questionnaire = () => {
+    let history = useHistory();
     const [answers,setAnswers] = useState(new Array(NUMBER_OF_QUESTIONS));
     const [submittingQuestionnaire,setSubmittingQuestionnaire] = useState(false);
 
@@ -20,14 +24,23 @@ const Questionnaire = () => {
         setAnswers(newAnswers);
     }
 
-    const SubmitQuestionnaire = () => {
+    const SubmitQuestionnaire = async () => {
+        const userPortfolio = await calculateUserPortfolio(60,10000)
+        console.log('userPortfolio: ',userPortfolio)
+        await savePortfolio({userId: 1,userPortfolio})
+
         setSubmittingQuestionnaire(true);
         if(answers.includes(undefined)){
             setSubmittingQuestionnaire(false);
             return undefined;
         }
         const questionnaireAnswers = calculateQuestionnaireAnswers(answers);
-
+        // const userPortfolio = await calculateUserPortfolio(questionnaireAnswers.totalScore,10000)
+        // console.log('userPortfolio: ',userPortfolio)
+        // await savePortfolio({userId: 1,userPortfolio})
+        // risk profile mashu
+        // portfolio
+        // portfolio assets
         return true;
     }
 
@@ -98,8 +111,9 @@ const Questionnaire = () => {
                                                     icon: "success",
                                                 });
                                             } else {
-                                                swal("Your imaginary file is safe!");
+                                                swal("Your questionnaire is safe!");
                                             }
+                                            history.push("/portofolio");
                                             setSubmittingQuestionnaire(false);
                                         })
                                     }

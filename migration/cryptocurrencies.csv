@@ -1,4 +1,4 @@
-Rank,Name,Symbol,Price,Market cap
+rank,name,symbol,price,market_cap
 1,Bitcoin,BTC,"$21,314.23","$406,890,782,123"
 2,Ethereum,ETH,"$1,185.52","$144,026,107,588"
 3,Tether,USDT,$0.9996,"$66,203,826,482"

@@ -2,9 +2,9 @@
   "Db": {
     "host": "localhost",
     "user": "root",
+    "pass": "root",
     "port": 3306,
-    "db": "test",
-    "pass": ""
+    "database": ""
   },
   "port": 8080
 }

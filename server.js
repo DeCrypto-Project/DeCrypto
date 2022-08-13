@@ -1,3 +1,3 @@
-const app = require('./app')
-const config = require('config')
-app.listen(3001, () => console.log('Server is Up 3001'))
+const app = require('./app');
+const config = require('config');
+app.listen(config.port , () => console.log(`Server is Up ${config.port}`));

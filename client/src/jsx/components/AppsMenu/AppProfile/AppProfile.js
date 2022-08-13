@@ -16,7 +16,7 @@ import profile from "../../../../images/profile/profile.png";
 import PageTitle from "../../../layouts/PageTitle";
 
 const AppProfile = () => {
-  const [activeToggle, setActiveToggle] = useState("posts");
+  const [activeToggle, setActiveToggle] = useState("aboutMe");
   const [sendMessage, setSendMessage] = useState(false);
   const [postModal, setPostModal] = useState(false);
   const [cameraModal, setCameraModal] = useState(false);
@@ -50,11 +50,11 @@ const AppProfile = () => {
                 </div>
                 <div className="profile-details">
                   <div className="profile-name px-3 pt-2">
-                    <h4 className="text-primary mb-0">Mitchell C. Shay</h4>
-                    <p>UX / UI Designer</p>
+                    <h4 className="text-primary mb-0">Nir Jacob</h4>
+                    <p>Full-Stack Developer</p>
                   </div>
                   <div className="profile-email px-2 pt-2">
-                    <h4 className="text-muted mb-0">hello@email.com</h4>
+                    <h4 className="text-muted mb-0">nirjacob@email.com</h4>
                     <p>Email</p>
                   </div>
                   <Dropdown className="dropdown ml-auto">
@@ -292,9 +292,6 @@ const AppProfile = () => {
               <div className="profile-tab">
                 <div className="custom-tab-1">
 						<ul className="nav nav-tabs">
-							<li className="nav-item" onClick={() => setActiveToggle("posts")}>
-								<Link to="#my-posts" data-toggle="tab" className={`nav-link ${ activeToggle === "posts" ? "active show" : ""}`}>Posts</Link>
-							</li>
 							<li className="nav-item" onClick={() => setActiveToggle("aboutMe")}>
 								<Link to="#about-me"  data-toggle="tab" className={`nav-link ${ activeToggle === "aboutMe" ? "active show" : ""}`}>About Me</Link>
 							</li>
@@ -303,154 +300,10 @@ const AppProfile = () => {
 							</li>
 						</ul>
 					<div className="tab-content">
-						<div id="my-posts" className={`tab-pane fade ${ activeToggle === "posts" ? "active show" : "" }`} >
-							<div className="my-post-content pt-3">
-								<div className="post-input">
-										<textarea name="textarea" id="textarea" cols={30} rows={5} className="form-control bg-transparent" placeholder="Please type what you want...."defaultValue={""}/>
-										<Link to="/app-profile" className="btn btn-primary light px-3 mr-1" data-toggle="modal" data-target="#linkModal" onClick={() => setLinkModal(true)}>
-											<i className="fa fa-link m-0" />{" "}
-										</Link>
-									{/* Modal */}
-									<Modal show={linkModal} onHide={() => setLinkModal(false)} className="modal fade post-input" id="linkModal" aria-hidden="true" centered>
-										<div className="modal-content">
-											<div className="modal-header">
-												<h5 className="modal-title">Social Links</h5>
-												<button type="button" className="close" data-dismiss="modal" onClick={() => setLinkModal(false)}>
-													<span>×</span>
-												</button>
-											</div>
-											<div className="modal-body">
-												<Link className="btn-social mr-1 facebook" to="/app-profile"><i className="fa fa-facebook" /></Link>
-												<Link className="btn-social mr-1 google-plus" to="/app-profile"> <i className="fa fa-google-plus" /></Link>
-												<Link className="btn-social mr-1 linkedin" to="/app-profile"><i className="fa fa-linkedin" /></Link>
-												<Link className="btn-social mr-1 instagram" to="/app-profile"> <i className="fa fa-instagram" /></Link>
-												<Link className="btn-social mr-1 twitter" to="/app-profile"><i className="fa fa-twitter" /></Link>
-												<Link className="btn-social mr-1 youtube" to="/app-profile"><i className="fa fa-youtube" /></Link>
-												<Link className="btn-social whatsapp" to="/app-profile"><i className="fa fa-whatsapp" /></Link>
-											</div>
-										</div>
-									</Modal>
-									<Link to="/app-profile" className="btn btn-primary light px-3 mr-1" data-toggle="modal" data-target="#cameraModal" onClick={() => setCameraModal(true)}>
-										<i className="fa fa-camera m-0" />{" "}
-									</Link>
-									{/* Modal */}
-									<Modal show={cameraModal} onHide={setCameraModal} className="modal fade" id="cameraModal" centered>
-										<div className="modal-content">
-											<div className="modal-header">
-												<h5 className="modal-title">Upload images</h5>
-												<button type="button" className="close" data-dismiss="modal" onClick={() => setCameraModal(false)}>
-													<span>×</span>
-												</button>
-											</div>
-											<div className="modal-body">
-												<div className="input-group mb-3">
-													<div className="input-group-prepend">
-														<span className="input-group-text">Upload</span>
-													</div>
-													<div className="custom-file">
-														<input type="file" className="custom-file-input"/>
-														<label className="custom-file-label">Choose file</label>
-													</div>
-												</div>
-											</div>
-										</div>
-									</Modal>
-									<Link to="/app-profile" className="btn btn-primary ml-1" data-toggle="modal" data-target="#postModal" onClick={() => setPostModal(true)}>Post</Link>
-									{/* Modal */}
-									<Modal show={postModal} onHide={setPostModal} className="modal fade" id="postModal" centered>
-										<div className="modal-content">
-											<div className="modal-header">
-												<h5 className="modal-title">Post</h5>
-												<button type="button" className="close" data-dismiss="modal" onClick={() => setPostModal(false)} >
-													<span>×</span>
-												</button>
-											</div>
-											<div className="modal-body">
-												<textarea name="textarea" id="textarea" cols={30} rows={5} className="form-control bg-transparent" placeholder="Please type what you want...." defaultValue={""}/>
-												<Link className="btn btn-primary btn-rounded mt-2" to="/app-profile">Post</Link>
-											</div>
-										</div>
-									</Modal>
-								</div>
-
-								<div className="profile-uoloaded-post border-bottom-1 pb-5">
-									<img src={profile08} alt="" className="img-fluid w-100" />
-									<Link className="post-title" to="/post-details">
-										<h4>Collection of textile samples lay spread</h4>
-									</Link>
-									<p>
-										A wonderful serenity has take possession of my entire soul like these sweet morning of spare which enjoy whole heart.A wonderful serenity has take 
-										possession of my entire soul like these sweet morning of spare which enjoy whole heart.
-									</p>
-									<button className="btn btn-primary mr-2">
-										<span className="mr-2"> <i className="fa fa-heart" /> </span>Like 
-									</button>
-									<button className="btn btn-secondary" onClick={() => setReplayModal(true)}>
-										<span className="mr-2"> <i className="fa fa-reply" /></span>Reply
-									</button>
-								</div>
-								<div className="profile-uoloaded-post border-bottom-1 pb-5">
-									<img src={profile09} alt="" className="img-fluid w-100" />
-									<Link className="post-title" to="/post-details">
-										<h4>Collection of textile samples lay spread</h4>
-									</Link>
-									<p>
-										A wonderful serenity has take possession of my
-										entire soul like these sweet morning of spare which
-										enjoy whole heart.A wonderful serenity has take
-										possession of my entire soul like these sweet
-										morning of spare which enjoy whole heart.
-									</p>
-									<button className="btn btn-primary mr-2">
-										<span className="mr-2"> <i className="fa fa-heart" /> </span>Like
-									</button>
-									<button className="btn btn-secondary" onClick={() => setReplayModal(true)}>
-										<span className="mr-2">  <i className="fa fa-reply" /></span>Reply
-									</button>
-								</div>
-								<div className="profile-uoloaded-post pb-3">
-									<img src={profile08} alt="" className="img-fluid  w-100" />
-									<Link className="post-title" to="/post-details">
-										<h4>Collection of textile samples lay spread</h4>
-									</Link>
-									<p>
-										A wonderful serenity has take possession of my
-										entire soul like these sweet morning of spare which
-										enjoy whole heart.A wonderful serenity has take
-										possession of my entire soul like these sweet
-										morning of spare which enjoy whole heart.
-									</p>
-									<button className="btn btn-primary mr-2">
-										<span className="mr-2"><i className="fa fa-heart" /></span>Like
-									</button>
-									<button className="btn btn-secondary" onClick={() => setReplayModal(true)}>
-										<span className="mr-2"> <i className="fa fa-reply" /></span>Reply
-									</button>
-								</div>
-								{/* Modal */}
-								<Modal   show={replayModal}onHide={() => setReplayModal(false)} className="modal fade" id="replyModal" centered>										
-									<div className="modal-content">
-										<div className="modal-header">
-											<h5 className="modal-title">Post Reply</h5>
-											<button type="button" className="close" data-dismiss="modal" onClick={() => setReplayModal(false)}><span>&times;</span></button>
-										</div>
-										<div className="modal-body">
-											<form>
-												<textarea className="form-control" rows="4">Message</textarea>
-											</form>
-										</div>
-										<div className="modal-footer">
-											<button type="button" className="btn btn-danger light" onClick={() => setReplayModal(false)}>Close</button>
-											<button type="button" className="btn btn-primary">Reply</button>
-										</div>
-									</div>
-								</Modal>
-							</div>
-						</div>
+						
 						<div id="about-me" className={`tab-pane fade ${ activeToggle === "aboutMe" ? "active show" : ""}`}>
 							<div className="profile-about-me">
 								<div className="pt-4 border-bottom-1 pb-3">
-									<h4 className="text-primary">About Me</h4>
 									<p className="mb-2">
 										A wonderful serenity has taken possession of my
 										entire soul, like these sweet mornings of spring

@@ -1,0 +1,702 @@
+﻿[
+    {
+        "rank": "1",
+        "name": "Bitcoin",
+        "ticker": "BTC",
+        "price": "\"$21,314.23\"",
+        "market_cap": "\"$406,890,782,123\""
+    },
+    {
+        "rank": "2",
+        "name": "Ethereum",
+        "ticker": "ETH",
+        "price": "\"$1,185.52\"",
+        "market_cap": "\"$144,026,107,588\""
+    },
+    {
+        "rank": "3",
+        "name": "Tether",
+        "ticker": "USDT",
+        "price": "$0.9996",
+        "market_cap": "\"$66,203,826,482\""
+    },
+    {
+        "rank": "4",
+        "name": "USD Coin",
+        "ticker": "USDC",
+        "price": "$1",
+        "market_cap": "\"$56,055,591,727\""
+    },
+    {
+        "rank": "5",
+        "name": "Binance Coin",
+        "ticker": "BNB",
+        "price": "$237.15",
+        "market_cap": "\"$38,721,134,621\""
+    },
+    {
+        "rank": "6",
+        "name": "Binance USD",
+        "ticker": "BUSD",
+        "price": "$1",
+        "market_cap": "\"$18,577,828,847\""
+    },
+    {
+        "rank": "7",
+        "name": "XRP",
+        "ticker": "XRP",
+        "price": "$0.3384",
+        "market_cap": "\"$16,359,305,445\""
+    },
+    {
+        "rank": "8",
+        "name": "Cardano",
+        "ticker": "ADA",
+        "price": "$0.4718",
+        "market_cap": "\"$16,129,329,413\""
+    },
+    {
+        "rank": "9",
+        "name": "Solana",
+        "ticker": "SOL",
+        "price": "$37.04",
+        "market_cap": "\"$12,790,478,531\""
+    },
+    {
+        "rank": "10",
+        "name": "Dai Stablecoin",
+        "ticker": "DAI",
+        "price": "$1",
+        "market_cap": "\"$10,226,677,513\""
+    },
+    {
+        "rank": "11",
+        "name": "Dogecoin",
+        "ticker": "DOGE",
+        "price": "$0.0681",
+        "market_cap": "\"$9,036,073,085\""
+    },
+    {
+        "rank": "12",
+        "name": "TRON",
+        "ticker": "TRX",
+        "price": "$0.0688",
+        "market_cap": "\"$7,003,525,581\""
+    },
+    {
+        "rank": "13",
+        "name": "Polkadot",
+        "ticker": "DOT",
+        "price": "$7.06",
+        "market_cap": "\"$6,969,050,952\""
+    },
+    {
+        "rank": "14",
+        "name": "Shiba Inu",
+        "ticker": "SHIB",
+        "price": "$0.0000113",
+        "market_cap": "\"$6,663,336,748\""
+    },
+    {
+        "rank": "15",
+        "name": "Wrapped Bitcoin",
+        "ticker": "WBTC",
+        "price": "\"$21,299.13\"",
+        "market_cap": "\"$6,072,467,159\""
+    },
+    {
+        "rank": "16",
+        "name": "Unus Sed",
+        "ticker": "LEO",
+        "price": "$5.8",
+        "market_cap": "\"$5,537,226,747\""
+    },
+    {
+        "rank": "17",
+        "name": "Avalanche",
+        "ticker": "AVAX",
+        "price": "$19.34",
+        "market_cap": "\"$5,477,257,947\""
+    },
+    {
+        "rank": "18",
+        "name": "Uniswap",
+        "ticker": "UNI",
+        "price": "$6.23",
+        "market_cap": "\"$4,574,765,062\""
+    },
+    {
+        "rank": "19",
+        "name": "Polygon",
+        "ticker": "MATIC",
+        "price": "$0.5711",
+        "market_cap": "\"$4,572,685,680\""
+    },
+    {
+        "rank": "20",
+        "name": "FTX Token",
+        "ticker": "FTT",
+        "price": "$26.36",
+        "market_cap": "\"$4,292,314,009\""
+    },
+    {
+        "rank": "21",
+        "name": "Litecoin",
+        "ticker": "LTC",
+        "price": "$54.45",
+        "market_cap": ""
+    },
+    {
+        "rank": "22",
+        "name": "OKB",
+        "ticker": "OKB",
+        "price": "$12.72",
+        "market_cap": ""
+    },
+    {
+        "rank": "23",
+        "name": "Cronos",
+        "ticker": "CRO",
+        "price": "$0.1224",
+        "market_cap": ""
+    },
+    {
+        "rank": "24",
+        "name": "ChainLink",
+        "ticker": "LINK",
+        "price": "$6.32",
+        "market_cap": ""
+    },
+    {
+        "rank": "25",
+        "name": "Stellar",
+        "ticker": "XLM",
+        "price": "$0.1116",
+        "market_cap": ""
+    },
+    {
+        "rank": "26",
+        "name": "NEAR Protocol",
+        "ticker": "NEAR",
+        "price": "$3.66",
+        "market_cap": ""
+    },
+    {
+        "rank": "27",
+        "name": "Monero",
+        "ticker": "XMR",
+        "price": "$124.19",
+        "market_cap": ""
+    },
+    {
+        "rank": "28",
+        "name": "Algorand",
+        "ticker": "ALGO",
+        "price": "$0.3183",
+        "market_cap": ""
+    },
+    {
+        "rank": "29",
+        "name": "Ethereum Classic",
+        "ticker": "ETC",
+        "price": "$15.56",
+        "market_cap": ""
+    },
+    {
+        "rank": "30",
+        "name": "Bitcoin Cash",
+        "ticker": "BCH",
+        "price": "$110.09",
+        "market_cap": ""
+    },
+    {
+        "rank": "31",
+        "name": "Cosmos",
+        "ticker": "ATOM",
+        "price": "$8.77",
+        "market_cap": ""
+    },
+    {
+        "rank": "32",
+        "name": "Vechain",
+        "ticker": "VET",
+        "price": "$0.024",
+        "market_cap": ""
+    },
+    {
+        "rank": "33",
+        "name": "Flow",
+        "ticker": "FLOW",
+        "price": "$1.67",
+        "market_cap": ""
+    },
+    {
+        "rank": "34",
+        "name": "Internet Computer",
+        "ticker": "ICP",
+        "price": "$6.66",
+        "market_cap": ""
+    },
+    {
+        "rank": "35",
+        "name": "Decentraland",
+        "ticker": "MANA",
+        "price": "$0.8842",
+        "market_cap": ""
+    },
+    {
+        "rank": "36",
+        "name": "TrueUSD",
+        "ticker": "TUSD",
+        "price": "$1",
+        "market_cap": ""
+    },
+    {
+        "rank": "37",
+        "name": "The Sandbox",
+        "ticker": "SAND",
+        "price": "$1.18",
+        "market_cap": ""
+    },
+    {
+        "rank": "38",
+        "name": "ApeCoin",
+        "ticker": "APE",
+        "price": "$4.89",
+        "market_cap": ""
+    },
+    {
+        "rank": "39",
+        "name": "Tezos",
+        "ticker": "XTZ",
+        "price": "$1.61",
+        "market_cap": ""
+    },
+    {
+        "rank": "40",
+        "name": "Hedera Hashgraph",
+        "ticker": "HBAR",
+        "price": "$0.0663",
+        "market_cap": ""
+    },
+    {
+        "rank": "41",
+        "name": "Filecoin",
+        "ticker": "FIL",
+        "price": "$5.64",
+        "market_cap": ""
+    },
+    {
+        "rank": "42",
+        "name": "Elrond",
+        "ticker": "EGLD",
+        "price": "$55.21",
+        "market_cap": ""
+    },
+    {
+        "rank": "43",
+        "name": "Theta",
+        "ticker": "THETA",
+        "price": "$1.24",
+        "market_cap": ""
+    },
+    {
+        "rank": "44",
+        "name": "Axie Infinity",
+        "ticker": "AXS",
+        "price": "$14.73",
+        "market_cap": ""
+    },
+    {
+        "rank": "45",
+        "name": "Helium",
+        "ticker": "HNT",
+        "price": "$9.56",
+        "market_cap": ""
+    },
+    {
+        "rank": "46",
+        "name": "Aave",
+        "ticker": "AAVE",
+        "price": "$80.49",
+        "market_cap": ""
+    },
+    {
+        "rank": "47",
+        "name": "Quant",
+        "ticker": "QNT",
+        "price": "$87.55",
+        "market_cap": ""
+    },
+    {
+        "rank": "48",
+        "name": "Bitcoin SV",
+        "ticker": "BSV",
+        "price": "$55.19",
+        "market_cap": ""
+    },
+    {
+        "rank": "49",
+        "name": "EOS",
+        "ticker": "EOS",
+        "price": "$1.02",
+        "market_cap": ""
+    },
+    {
+        "rank": "50",
+        "name": "Zcash",
+        "ticker": "ZEC",
+        "price": "$65.21",
+        "market_cap": ""
+    },
+    {
+        "rank": "51",
+        "name": "PancakeSwap",
+        "ticker": "CAKE",
+        "price": "$3.17",
+        "market_cap": ""
+    },
+    {
+        "rank": "52",
+        "name": "Maker",
+        "ticker": "MKR",
+        "price": "$963.31",
+        "market_cap": ""
+    },
+    {
+        "rank": "53",
+        "name": "Pax Dollar",
+        "ticker": "USDP",
+        "price": "$0.9978",
+        "market_cap": ""
+    },
+    {
+        "rank": "54",
+        "name": "KuCoin Token",
+        "ticker": "KCS",
+        "price": "$9.43",
+        "market_cap": ""
+    },
+    {
+        "rank": "55",
+        "name": "BitTorrent(new)",
+        "ticker": "BTT",
+        "price": "$0.0000009114",
+        "market_cap": ""
+    },
+    {
+        "rank": "56",
+        "name": "MIOTA",
+        "ticker": "IOTA",
+        "price": "$0.2896",
+        "market_cap": ""
+    },
+    {
+        "rank": "57",
+        "name": "THORChain",
+        "ticker": "RUNE",
+        "price": "$2.36",
+        "market_cap": ""
+    },
+    {
+        "rank": "58",
+        "name": "eCash",
+        "ticker": "XEC",
+        "price": "$0.00004085",
+        "market_cap": ""
+    },
+    {
+        "rank": "59",
+        "name": "Luna Classic",
+        "ticker": "LUNC",
+        "price": "$0.000111",
+        "market_cap": ""
+    },
+    {
+        "rank": "60",
+        "name": "Huobi Token",
+        "ticker": "HT",
+        "price": "$4.34",
+        "market_cap": ""
+    },
+    {
+        "rank": "61",
+        "name": "Graph",
+        "ticker": "GRT",
+        "price": "$0.1027",
+        "market_cap": ""
+    },
+    {
+        "rank": "62",
+        "name": "Fantom",
+        "ticker": "FTM",
+        "price": "$0.2722",
+        "market_cap": ""
+    },
+    {
+        "rank": "63",
+        "name": "Klaytn",
+        "ticker": "KLAY",
+        "price": "$0.2374",
+        "market_cap": ""
+    },
+    {
+        "rank": "64",
+        "name": "Neo",
+        "ticker": "NEO",
+        "price": "$9.25",
+        "market_cap": ""
+    },
+    {
+        "rank": "65",
+        "name": "Basic Attention",
+        "ticker": "BAT",
+        "price": "$0.4197",
+        "market_cap": ""
+    },
+    {
+        "rank": "66",
+        "name": "Chiliz",
+        "ticker": "CHZ",
+        "price": "$0.1024",
+        "market_cap": ""
+    },
+    {
+        "rank": "67",
+        "name": "PAX Gold",
+        "ticker": "PAXG",
+        "price": "\"$1,738.76\"",
+        "market_cap": ""
+    },
+    {
+        "rank": "68",
+        "name": "Green Metaverse",
+        "ticker": "GMT",
+        "price": "$0.9691",
+        "market_cap": ""
+    },
+    {
+        "rank": "69",
+        "name": "Waves",
+        "ticker": "WAVES",
+        "price": "$5.27",
+        "market_cap": ""
+    },
+    {
+        "rank": "70",
+        "name": "Stacks",
+        "ticker": "STX",
+        "price": "$0.4178",
+        "market_cap": ""
+    },
+    {
+        "rank": "71",
+        "name": "Bitkub Coin",
+        "ticker": "KUB",
+        "price": "$2.97",
+        "market_cap": ""
+    },
+    {
+        "rank": "72",
+        "name": "Loopring",
+        "ticker": "LRC",
+        "price": "$0.4003",
+        "market_cap": ""
+    },
+    {
+        "rank": "73",
+        "name": "Curve",
+        "ticker": "CRV",
+        "price": "$0.9774",
+        "market_cap": ""
+    },
+    {
+        "rank": "74",
+        "name": "Zilliqa",
+        "ticker": "ZIL",
+        "price": "$0.04",
+        "market_cap": ""
+    },
+    {
+        "rank": "75",
+        "name": "Dash",
+        "ticker": "DASH",
+        "price": "$47.78",
+        "market_cap": ""
+    },
+    {
+        "rank": "76",
+        "name": "TerraClassicUSD",
+        "ticker": "USTC",
+        "price": "$0.0497",
+        "market_cap": ""
+    },
+    {
+        "rank": "77",
+        "name": "Verasity",
+        "ticker": "VRA",
+        "price": "$0.004882",
+        "market_cap": ""
+    },
+    {
+        "rank": "78",
+        "name": "Enjin Coin",
+        "ticker": "ENJ",
+        "price": "$0.543",
+        "market_cap": ""
+    },
+    {
+        "rank": "79",
+        "name": "Gatechain Token",
+        "ticker": "GT",
+        "price": "$3.92",
+        "market_cap": ""
+    },
+    {
+        "rank": "80",
+        "name": "Luna",
+        "ticker": "LUNA",
+        "price": "$2.22",
+        "market_cap": ""
+    },
+    {
+        "rank": "81",
+        "name": "Kusama",
+        "ticker": "KSM",
+        "price": "$51.52",
+        "market_cap": ""
+    },
+    {
+        "rank": "82",
+        "name": "Celo",
+        "ticker": "CELO",
+        "price": "$0.9351",
+        "market_cap": ""
+    },
+    {
+        "rank": "83",
+        "name": "Kava",
+        "ticker": "KAVA",
+        "price": "$1.85",
+        "market_cap": ""
+    },
+    {
+        "rank": "84",
+        "name": "Gemini Dollar",
+        "ticker": "GUSD",
+        "price": "$1",
+        "market_cap": ""
+    },
+    {
+        "rank": "85",
+        "name": "Mina Protocol",
+        "ticker": "MINA",
+        "price": "$0.6802",
+        "market_cap": ""
+    },
+    {
+        "rank": "86",
+        "name": "Compound",
+        "ticker": "COMP",
+        "price": "$55.02",
+        "market_cap": ""
+    },
+    {
+        "rank": "87",
+        "name": "Amp",
+        "ticker": "AMP",
+        "price": "$0.009319",
+        "market_cap": ""
+    },
+    {
+        "rank": "88",
+        "name": "Convex Finance",
+        "ticker": "CVX",
+        "price": "$6.05",
+        "market_cap": ""
+    },
+    {
+        "rank": "89",
+        "name": "Arweave",
+        "ticker": "AR",
+        "price": "$11.58",
+        "market_cap": ""
+    },
+    {
+        "rank": "90",
+        "name": "Gala",
+        "ticker": "GALA",
+        "price": "$0.0539",
+        "market_cap": ""
+    },
+    {
+        "rank": "91",
+        "name": "1inch Token",
+        "ticker": "1INCH",
+        "price": "$0.6704",
+        "market_cap": ""
+    },
+    {
+        "rank": "92",
+        "name": "NEM",
+        "ticker": "XEM",
+        "price": "$0.0413",
+        "market_cap": ""
+    },
+    {
+        "rank": "93",
+        "name": "Holo",
+        "ticker": "HOT",
+        "price": "$0.002123",
+        "market_cap": ""
+    },
+    {
+        "rank": "94",
+        "name": "Threshold Network",
+        "ticker": "T",
+        "price": "$0.0368",
+        "market_cap": ""
+    },
+    {
+        "rank": "95",
+        "name": "Nexo",
+        "ticker": "NEXO",
+        "price": "$0.6272",
+        "market_cap": ""
+    },
+    {
+        "rank": "96",
+        "name": "XDC Network",
+        "ticker": "XDC",
+        "price": "$0.027",
+        "market_cap": ""
+    },
+    {
+        "rank": "97",
+        "name": "Decred",
+        "ticker": "DCR",
+        "price": "$22.96",
+        "market_cap": ""
+    },
+    {
+        "rank": "98",
+        "name": "WEMIX",
+        "ticker": "WEMIX",
+        "price": "$2.59",
+        "market_cap": ""
+    },
+    {
+        "rank": "99",
+        "name": "NEST Protocol",
+        "ticker": "NEST",
+        "price": "$0.0312",
+        "market_cap": ""
+    },
+    {
+        "rank": "100",
+        "name": "Qtum",
+        "ticker": "QTUM",
+        "price": "$2.98",
+        "market_cap": ""
+    }
+]
