@@ -20,7 +20,7 @@ const cryptocurrencies = require('./cryptocurrencies.json');
             //                             \`portfolio_id\`         INT UNSIGNED NOT NULL AUTO_INCREMENT,
             //                             \`user_id\`              INT UNSIGNED NOT NULL,
             //                             \`algorithm\`            VARCHAR(256) NULL,
-            //                             \`date\`                 datetime NULL,
+            //                             \`date\`                 VARCHAR(256) NULL,
             //                             \`total_investment\`     INT UNSIGNED NOT NULL,
             //                             PRIMARY KEY (\`portfolio_id\`),
             //                             FOREIGN KEY (\`user_id\`) REFERENCES users(\`id\`)
@@ -40,7 +40,7 @@ const cryptocurrencies = require('./cryptocurrencies.json');
             //                             \`main_consideration\`    VARCHAR(256) NOT NULL,
             //                             \`time_frame_score\`      INT UNSIGNED NOT NULL,
             //                             \`risk_attitude_score\`   INT UNSIGNED NOT NULL,
-            //                             \`questionnaire_result\`  INT UNSIGNED NOT NULL,
+            //                             \`questionnaire_result\`  VARCHAR(256) NOT NULL,
             //                             \`total_score\`           INT UNSIGNED NOT NULL,
             //                             FOREIGN KEY (\`user_id\`) REFERENCES users(\`id\`),
             //                             PRIMARY KEY (\`risk_profile_id\`)

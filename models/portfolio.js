@@ -9,7 +9,12 @@ const getPortfolioByID = async (id) => {
 }
 
 const savePortfolioToDb = async (userId,userPortfolio) => {
-    return (await mysql.runQuery('INSERT INTO portfolio (user_id,algorithm,date,total_investment) VALUES(?,?,?,?) ;', [userId,userPortfolio.algorithm,userPortfolio.date,userPortfolio.totalInvestment]))
+    const lastPortfolioId = await mysql.runQuery('INSERT INTO portfolios (user_id,algorithm,date,total_investment) VALUES(?,?,?,?) ;', [userId,userPortfolio.algorithm,userPortfolio.date,userPortfolio.totalInvestment])
+    for (let [key, value] of Object.entries(userPortfolio.Profolios)) {
+        const calculateRelativeValuePrecentage = (value / userPortfolio.totalInvestment) * 100;
+        await mysql.runQuery('INSERT INTO portfolios_assets (portfolio_id,ticker,percentage) VALUES(?,?,?) ;', [lastPortfolioId.insertId,key,calculateRelativeValuePrecentage])
+    }
+    return;
 }
 
 const calculatePortfolioFromService = async (riskScore, amountToInvest) => {

@@ -3,7 +3,7 @@ import {Button, Card, Col} from "react-bootstrap";
 import PageTItle from "../layouts/PageTitle";
 import Accordion from "react-bootstrap/Accordion";
 import Select from "react-select";
-import {calculateQuestionnaireAnswers} from "../../services/QuestionnaireService";
+import {saveQuestionnaire,calculateQuestionnaireAnswers} from "../../services/QuestionnaireService";
 import {questions,NUMBER_OF_QUESTIONS} from "../constants/questionnaireQuestions";
 import swal from "sweetalert";
 import BouncingDotsLoader from "../components/Forms/Loading/Loading";
@@ -25,22 +25,15 @@ const Questionnaire = () => {
     }
 
     const SubmitQuestionnaire = async () => {
-        const userPortfolio = await calculateUserPortfolio(60,10000)
-        console.log('userPortfolio: ',userPortfolio)
-        await savePortfolio({userId: 1,userPortfolio})
-
         setSubmittingQuestionnaire(true);
         if(answers.includes(undefined)){
             setSubmittingQuestionnaire(false);
-            return undefined;
+            return null;
         }
         const questionnaireAnswers = calculateQuestionnaireAnswers(answers);
-        // const userPortfolio = await calculateUserPortfolio(questionnaireAnswers.totalScore,10000)
-        // console.log('userPortfolio: ',userPortfolio)
-        // await savePortfolio({userId: 1,userPortfolio})
-        // risk profile mashu
-        // portfolio
-        // portfolio assets
+        await saveQuestionnaire({userId: 1,questionnaireAnswers})
+        const userPortfolio = await calculateUserPortfolio(questionnaireAnswers.totalScore,100000)
+        await savePortfolio({userId: 1,userPortfolio:userPortfolio.data})
         return true;
     }
 
@@ -102,19 +95,20 @@ const Questionnaire = () => {
                                             buttons: true,
                                             dangerMode: true,
                                         }).then(async (willDelete) => {
-                                            if(!SubmitQuestionnaire()){
-                                                return swal("Answer all questions before submitting!");
-                                            }
-                                            await sleep(3000);
                                             if (willDelete) {
+                                                const isAnsweredAll = await SubmitQuestionnaire();
+                                                if(!isAnsweredAll){
+                                                    return swal("Answer all questions before submitting!");
+                                                }
+                                                // await sleep(3000);
                                                 swal("Poof! Your portfolio is ready!", {
                                                     icon: "success",
                                                 });
+                                                history.push("/portofolio");
+                                                setSubmittingQuestionnaire(false);
                                             } else {
                                                 swal("Your questionnaire is safe!");
                                             }
-                                            history.push("/portofolio");
-                                            setSubmittingQuestionnaire(false);
                                         })
                                     }
                                     }

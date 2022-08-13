@@ -6,4 +6,5 @@ router.get(':id', getPortfolio);
 router.get('/calculate/:riskScore&:amountToInvest', calculatePortfolio);
 router.post('/savePortfolio', savePortfolio);
 
+
 module.exports = router;

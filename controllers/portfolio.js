@@ -22,10 +22,9 @@ const calculatePortfolio = async (req, res, next) => {
 
 const savePortfolio = async (req, res, next) => {
     try {
-        const {userId,userPortfolio} = req.body;
-        console.log('controller: ',userId,userPortfolio)
+        const {userId,userPortfolio} = req.body.params;
         await savePortfolioToDb(userId,userPortfolio);
-        return res.status(200);
+        return res.status(200).send('Portfolio saved successfully');
     } catch (err) {
         return next(err)
     }

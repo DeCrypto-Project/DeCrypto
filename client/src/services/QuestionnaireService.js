@@ -1,3 +1,10 @@
+import axios from "axios";
+
+export const saveQuestionnaire = async (answers) => {
+    return await axios.post(`/api/questionnaire/saveQuestionnaire`,{ params: answers});
+};
+
+
 const questionnaireResultToVolatility = (questionnaireResult) => {
     switch (questionnaireResult) {
         case 'Not Suitable':
@@ -60,7 +67,7 @@ const extractTotalScore = (riskAttitudeScore,timeFrameScore) => {
     }
 }
 
-const calculateQuestionnaireAnswers = (answers) => {
+export const calculateQuestionnaireAnswers = (answers) => {
     let timeFrameScore = 0;
     let riskAttitudeScore = 0;
     answers.map((answer,index)=> {
@@ -87,4 +94,3 @@ const calculateQuestionnaireAnswers = (answers) => {
 
 }
 
-module.exports= { extractTotalScore, calculateQuestionnaireAnswers };
