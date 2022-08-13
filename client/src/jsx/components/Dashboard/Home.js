@@ -6,6 +6,7 @@ import { Dropdown } from "react-bootstrap";
 import ContactSlider from "../zenix/Home/ContactSlider";
 import IndexTab from "../zenix/Home/IndexTab";
 import { ThemeContext } from "../../../context/ThemeContext";
+import {  Alert } from "react-bootstrap";
 
 //Images
 import Card1 from './../../../images/card/card1.jpg';
@@ -53,19 +54,33 @@ const Home = () => {
 			<Fragment>
 				<div className="form-head mb-sm-5 mb-3 d-flex flex-wrap align-items-center">
 					<h2 className="font-w600 mb-2 mr-auto ">Dashboard</h2>
-					<div className="weather-btn mb-2">
-						<span className="mr-3 fs-16 font-w600 text-black"><i className="fa fa-cloud mr-2"></i>21</span>
-						<Dropdown>
-							<Dropdown.Toggle variant="" as="div" className="form-control style-1 default-select mr-3 p-0">{country1}</Dropdown.Toggle>
-							<Dropdown.Menu>
-								<Dropdown.Item onClick={() => setCountry1("Medan, IDN")}>Medan, IDN</Dropdown.Item>
-								<Dropdown.Item onClick={() => setCountry1("Jakarta, IDN")}>Jakarta, IDN</Dropdown.Item>
-								<Dropdown.Item onClick={() => setCountry1("Surabaya, IDN")}>Surabaya, IDN</Dropdown.Item>
-							 </Dropdown.Menu>
-						</Dropdown>
-					</div>
-					<Link to={"#"} className="btn btn-secondary text-white mb-2"><i className="las la-calendar scale5 mr-3"></i>Filter Periode</Link>
 				</div>
+				<Alert
+					key={1}
+					variant={"warning"}
+					className="alert-dismissible fade show"
+				>
+					{
+						<svg
+							viewBox='0 0 24 24'
+							width='24'
+							height='24'
+							stroke='currentColor'
+							strokeWidth='2'
+							fill='none'
+							strokeLinecap='round'
+							strokeLinejoin='round'
+							className='mr-2'
+						>
+							<circle cx='12' cy='12' r='10'></circle>
+							<path d='M8 14s1.5 2 4 2 4-2 4-2'></path>
+							<line x1='9' y1='9' x2='9.01' y2='9'></line>
+							<line x1='15' y1='9' x2='15.01' y2='9'></line>
+						</svg>
+					}
+					<strong>{"data.msg"}</strong> {"data.text"}
+					{/*{btn(i, setBasicData, basicData, true)}*/}
+				</Alert>
 				<div className="row">
 					<div className="col-xl-3 col-sm-6 m-t35">
 						<div className="card card-coin">
