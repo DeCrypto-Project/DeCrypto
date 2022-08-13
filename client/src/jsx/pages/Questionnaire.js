@@ -63,7 +63,7 @@ const Questionnaire = () => {
                                         <span className="input-group-text">Please enter your desired investment amount in</span>
                                         <span className="input-group-text">$</span>
                                     </div>
-                                    <input type="text" className="form-control" placeholder="Amount" onChange={setInvestmentAmount}/>
+                                    <input type="text" className="form-control" placeholder="Amount" onInput={setInvestmentAmount}/>
                                 </div>
                             </form>
                         </div>
