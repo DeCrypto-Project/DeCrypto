@@ -101,6 +101,7 @@ import DataTable from "./components/table/DataTable";
 import BootstrapTable from "./components/table/BootstrapTable";
 
 /// Form
+import Questionnaire from "./pages/Questionnaire";
 import Element from "./components/Forms/Element/Element";
 import Wizard from "./components/Forms/Wizard/Wizard";
 import Pickers from "./components/Forms/Pickers/Pickers";
@@ -206,6 +207,7 @@ const Markup = () => {
 
     /// Form
 	
+    { url: "questionnaire", component: Questionnaire },
     { url: "form-element", component: Element },
 	{ url: "form-wizard", component: Wizard },
     { url: "form-pickers", component: Pickers },

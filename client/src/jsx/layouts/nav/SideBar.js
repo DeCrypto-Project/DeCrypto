@@ -185,6 +185,7 @@ class SideBar extends Component {
 				<ul >
                     <li><Link className={`${path === "portofolio" ? "mm-active" : ""}`} to="/portofolio">Portofolio</Link></li>
                     <li><Link className={`${path === "app-profile" ? "mm-active" : ""}`}  to="/app-profile">Profile</Link></li>
+                    <li><Link className={`${path === "questionnaire" ? "mm-active" : ""}`}  to="/questionnaire">Questionnaire</Link></li>
                   {/*<li><Link className={`${path === "" ? "mm-active" : ""}`} to="/">Dashboard(WIP)</Link></li>*/}
                   {/*<li><Link className={`${path === "wallet" ? "mm-active" : ""}`} to="/my-wallets">Wallet(WIP)</Link></li>*/}
                   {/*<li><Link className={`${path === "market-capital" ? "mm-active" : ""}`} to="/market-capital">Market Capital(WIP)</Link></li>*/}

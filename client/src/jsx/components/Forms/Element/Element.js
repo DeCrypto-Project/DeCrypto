@@ -1,14 +1,107 @@
-import React, { Fragment } from "react";
-import { ButtonGroup, Dropdown, SplitButton } from "react-bootstrap";
+import React, {Fragment, useState} from "react";
+import {ButtonGroup, Card, Col, Dropdown, SplitButton} from "react-bootstrap";
 import DropdownMultiselect from "react-multiselect-dropdown-bootstrap";
 import PageTItle from "../../../layouts/PageTitle";
+import Accordion from "react-bootstrap/Accordion";
 
 const Element = () => {
+  const defaultAccordion = [
+    {
+      title: "Accordion Header One",
+      text:
+          "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.",
+      bg: "primary",
+    },
+    {
+      title: "Accordion Header Two",
+      text:
+          "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.",
+
+      bg: "info",
+    },
+    {
+      title: "Accordion Header Three",
+      text:
+          "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.",
+
+      bg: "success",
+    },
+  ];
+  const [activeAccordionGradient, setActiveAccordionGradient] = useState(0);
+
   return (
     <Fragment>
       <PageTItle activeMenu="Element" motherMenu="Form" pageContent="Element" />
-
+      <Col xl="6">
+        <Card>
+          <Card.Header className="d-block">
+            <Card.Title>Accordion Gradient</Card.Title>
+            <Card.Text className="m-0 subtitle">
+              Add <code>accordion-gradient</code> class with{" "}
+              <code>accordion</code>
+            </Card.Text>
+          </Card.Header>
+          <Card.Body>
+            <Accordion
+                className="accordion accordion-rounded-stylish accordion-gradient"
+                defaultActiveKey="0"
+            >
+              {defaultAccordion.map((d, i) => (
+                  <div className="accordion__item" key={i}>
+                    <Accordion.Toggle
+                        as={Card.Text}
+                        eventKey={`${i}`}
+                        className={`accordion__header ${
+                            activeAccordionGradient === i ? "" : "collapsed"
+                        } accordion__header--primary`}
+                        onClick={() =>
+                            setActiveAccordionGradient(
+                                activeAccordionGradient === i ? -1 : i
+                            )
+                        }
+                    >
+                      <span className="accordion__header--icon"></span>
+                      <span className="accordion__header--text">{d.title}</span>
+                      <span className="accordion__header--indicator "></span>
+                    </Accordion.Toggle>
+                    <Accordion.Collapse
+                        eventKey={`${i}`}
+                        className="accordion__body"
+                    >
+                      <div className="accordion__body--text">{d.text}</div>
+                    </Accordion.Collapse>
+                  </div>
+              ))}
+            </Accordion>
+          </Card.Body>
+        </Card>
+      </Col>
       <div className="row">
+        <div className="col-xl-6 col-lg-6">
+          <div className="card">
+            <div className="card-header">
+              <h4 className="card-title">Inline Radio </h4>
+            </div>
+            <div className="card-body">
+              <div className="basic-form">
+                <form onSubmit={(e) => e.preventDefault()}>
+                  <div className="form-group mb-0">
+                    <label className="radio-inline mr-3">
+                      <input type="radio" name="optradio" /> Option 1
+                    </label>
+                    <label className="radio-inline mr-3">
+                      <input type="radio" name="optradio" /> Option 2
+                    </label>
+                    <label className="radio-inline mr-3">
+                      <input type="radio" name="optradio" /> Option 3
+                    </label>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="col-xl-6 col-lg-6">
           <div className="card">
             <div className="card-header">
@@ -614,30 +707,6 @@ const Element = () => {
                         <input type="radio" name="optradio" disabled /> Option 3
                       </label>
                     </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col-xl-6 col-lg-6">
-          <div className="card">
-            <div className="card-header">
-              <h4 className="card-title">Inline Radio </h4>
-            </div>
-            <div className="card-body">
-              <div className="basic-form">
-                <form onSubmit={(e) => e.preventDefault()}>
-                  <div className="form-group mb-0">
-                    <label className="radio-inline mr-3">
-                      <input type="radio" name="optradio" /> Option 1
-                    </label>
-                    <label className="radio-inline mr-3">
-                      <input type="radio" name="optradio" /> Option 2
-                    </label>
-                    <label className="radio-inline mr-3">
-                      <input type="radio" name="optradio" /> Option 3
-                    </label>
                   </div>
                 </form>
               </div>
