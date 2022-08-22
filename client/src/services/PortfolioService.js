@@ -1,7 +1,7 @@
 import axios from "axios";
 
-export const getUserPortfolio = (userId) => {
-  return axios.get(`/api/portfolio/${userId}`);
+export const getPortfolioAssets = async (portfolioId) => {
+  return await axios.get(`/api/portfolio/assets/${portfolioId}`);
 };
 
 // export const calculateUserPortfolio = async (riskScore, amountToInvest) => {
@@ -12,6 +12,6 @@ export const calculateUserPortfolio = async (riskScore, amountToInvest,chosenAlg
     return await axios.get(`/api/portfolio/calculate/${riskScore}&${amountToInvest}&${chosenAlgorithm}`);
 };
 
-export const savePortfolio = async ({userId,userPortfolio}) => {
-    return await axios.post(`/api/portfolio/savePortfolio`,{ params: {userId,userPortfolio} });
+export const savePortfolio = async (params) => {
+    return await axios.post(`/api/portfolio/savePortfolio`,{ params});
 };

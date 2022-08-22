@@ -42,6 +42,7 @@ const cryptocurrencies = require('./cryptocurrencies.json');
             //                             \`risk_attitude_score\`   INT UNSIGNED NOT NULL,
             //                             \`questionnaire_result\`  VARCHAR(256) NOT NULL,
             //                             \`total_score\`           INT UNSIGNED NOT NULL,
+            //                             \`investment_amount\`           INT UNSIGNED NOT NULL,
             //                             FOREIGN KEY (\`user_id\`) REFERENCES users(\`id\`),
             //                             PRIMARY KEY (\`risk_profile_id\`)
             //                     );`)

@@ -6,7 +6,7 @@
   "proxy": "http://localhost:3001/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js && npm start ./client/src/index.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/DeCrypto-Project/DeCrypto#readme",
   "dependencies": {
+    "aws-sdk": "^2.1198.0",
     "axios": "^0.27.2",
     "bluebird": "^3.7.2",
     "body-parser": "^1.20.0",
@@ -34,6 +35,8 @@
     "nodemon": "^2.0.16",
     "path": "^0.12.7",
     "react": "^18.1.0",
-    "react-router-dom": "^6.3.0"
+    "react-redux": "^8.0.2",
+    "react-router-dom": "^6.3.0",
+    "redux": "^4.2.0"
   }
 }

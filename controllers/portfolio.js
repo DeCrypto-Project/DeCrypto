@@ -1,9 +1,9 @@
-const { getPortfolioByID, calculatePortfolioFromService, savePortfolioToDb} = require('../models/portfolio.js')
+const { getPortfolioAssetsByID, calculatePortfolioFromService, savePortfolioToDb } = require('../models/portfolio.js')
 
-const getPortfolio = async (req, res, next) => {
+const getPortfolioAssets = async (req, res, next) => {
     const id = parseInt(req.params.id)
     try {
-      const portfolioInfo = await getPortfolioByID(id)
+      const portfolioInfo = await getPortfolioAssetsByID(id)
       if (!portfolioInfo) return res.status(404).send('Portfolio not found')
       return res.status(200).send(portfolioInfo)
     } catch (err) {
@@ -13,8 +13,8 @@ const getPortfolio = async (req, res, next) => {
 
 const calculatePortfolio = async (req, res, next) => {
     try {
-const {riskScore, amountToInvest,algorithm} = req.body.params;
-      const result = await calculatePortfolioFromService({riskScore, amountToInvest,algorithm})
+const {riskScore, amountToInvest,chosenAlgorithm} = req.params;
+      const result = await calculatePortfolioFromService({riskScore, amountToInvest,chosenAlgorithm})
       res.status(200).send(result.data);
     } catch (err) {
       return next(err)
@@ -31,4 +31,4 @@ const savePortfolio = async (req, res, next) => {
     }
 }
 
-module.exports = {getPortfolio,calculatePortfolio,savePortfolio}
+module.exports = {getPortfolioAssets,calculatePortfolio,savePortfolio}

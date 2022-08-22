@@ -38,8 +38,19 @@ const Questionnaire = () => {
             return null;
         }
         const questionnaireAnswers = calculateQuestionnaireAnswers(answers);
-        await saveQuestionnaire({userId: 1,questionnaireAnswers})
+        await saveQuestionnaire({userId: 1,questionnaireAnswers,chosenInvestmentAmount})
         const userPortfolio = await calculateUserPortfolio(questionnaireAnswers.totalScore,chosenInvestmentAmount,chosenAlgorithm)
+        // contract obj example
+        // {
+        //     "Profolios": {
+        //         "ADA-USD": 1.9815026686243584,
+        //         "BTC-USD": 118.83173054114798,
+        //         "ETH-USD": 2.1867667902276597
+        //     },
+        //     "algorithm": "Markowitz",
+        //     "date": "Fri, 19 Aug 2022 15:03:28 GMT",
+        //     "totalInvestment": 123
+        // }
         await savePortfolio({userId: 1,userPortfolio:userPortfolio.data})
         return true;
     }
