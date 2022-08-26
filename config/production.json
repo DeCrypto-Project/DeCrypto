@@ -1,10 +1,15 @@
 {
+  "host": "localhost",
+  "port": 3000,
   "Db": {
     "host": "localhost",
     "user": "root",
     "pass": "root",
-    "port": 3306,
-    "database": ""
+    "port": 3307,
+    "database": "db"
   },
-  "port": 8080
+  "PortfolioServiceServer": {
+    "host": "localhost",
+    "port": 5000
+  }
 }

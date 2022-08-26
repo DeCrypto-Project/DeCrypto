@@ -1,9 +1,9 @@
 FROM node:14
-ENV NODE_ENV production
-WORKDIR /app
+WORKDIR /client
 
 COPY package.json .
 RUN npm install
 COPY . .
 CMD npm run start
-EXPOSE 8080
+
+EXPOSE 8081
