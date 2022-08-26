@@ -1,23 +1,40 @@
-version: '2'
+version: '3.8'
 services:
-    web:
-      build: .
+    app:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      environment:
+        - MYSQL_DATABASE=future_advisor
+        - MYSQL_USER=root
+        - MYSQL_PASSWORD=secret
+        - MYSQL_ROOT_PASSWORD=secret
       ports:
         - "3000:3000"
-      environment:
-        NODE_ENV: 'production'
-        MYSQL_DATABASE: 'db'
-        MYSQL_USER: 'root'
-        MYSQL_PASSWORD: 'root'
-        MYSQL_ROOT_PASSWORD: 'root'
+      volumes:
+        - .:/app
+        - '/app/node_modules'
       depends_on:
-        - db
-    db:
+        - mysql_server
+
+    mysql_server:
       image: mysql:5.7
       environment:
-        MYSQL_DATABASE: 'db'
-        MYSQL_USER: 'root'
-        MYSQL_PASSWORD: 'root'
-        MYSQL_ROOT_PASSWORD: 'root'
-      ports:
-        - '3307:3307'
+        - MYSQL_DATABASE=future_advisor
+        - MYSQL_USER=root
+        - MYSQL_PASSWORD=secret
+        - MYSQL_ROOT_PASSWORD=secret
+
+# - '3399:3306'
+# 3399 is from my pc
+# 3306 is communication between server and sql db inside the container
+# NODE_ENV: 'production'
+# MYSQL_USER: 'root'
+# MYSQL_PASSWORD: 'root'
+# MYSQL_ROOT_PASSWORD: 'root'
+
+#  VVVVVin app:VVVVV
+# command: bash -c 'while !</dev/tcp/db/3306; do sleep 3; done; npm start'
+
+# SET UP COMMANDS:
+# docker run --rm -d --name mysql -e MYSQL_DATABASE='test_db' -e MYSQL_USER='dan' -e MYSQL_PASSWORD='secret' -e MYSQL_ROOT_PASSWORD='secret' --network node-api-network mysql:8.0 
