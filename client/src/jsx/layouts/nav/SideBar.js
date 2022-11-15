@@ -7,21 +7,23 @@ import PerfectScrollbar from "react-perfect-scrollbar";
 import { Link } from "react-router-dom";
 import profile from "../../../images/Untitled-1.jpg";
 
+
 class MM extends Component {
   componentDidMount() {
     this.$el = this.el;
     this.mm = new MetisMenu(this.$el);
   }
-  componentWillUnmount() {}
-  render() {
-    return (
-      <div className="mm-wrapper">
-        <ul className="metismenu" ref={(el) => (this.el = el)}>
-          {this.props.children}
-        </ul>
-      </div>
-    );
+  componentWillUnmount() {
   }
+    render() {
+        return (
+            <div className="mm-wrapper">
+                <ul className="metismenu" ref={(el) => (this.el = el)}>
+                    {this.props.children}
+                </ul>
+            </div>
+        );
+    }
 }
 
 class SideBar extends Component {
@@ -34,13 +36,14 @@ class SideBar extends Component {
       return aaa.classList.toggle("menu-toggle");
     }
     btn.addEventListener("click", toggleFunc);
-
-    //sidebar icon Heart blast
-    var handleheartBlast = document.querySelector(".heart");
-    function heartBlast() {
-      return handleheartBlast.classList.toggle("heart-blast");
-    }
-    handleheartBlast.addEventListener("click", heartBlast);
+		
+		//sidebar icon Heart blast
+		var handleheartBlast = document.querySelector('.heart');
+		function heartBlast() {
+			return handleheartBlast.classList.toggle("heart-blast");
+		}
+		handleheartBlast.addEventListener('click', heartBlast);
+	
   }
   state = {
     loveEmoji: false,
@@ -50,16 +53,16 @@ class SideBar extends Component {
     let path = window.location.pathname;
     path = path.split("/");
     path = path[path.length - 1];
-
+    
     /// Active menu
     let dashBoard = [
         "",
         "dashboard-light",
-        "my-wallets",
-        "transactions",
-        "coin-details",
-        "portofolio",
-        "market-capital",
+		  "my-wallets",
+		  "transactions",
+		  "coin-details",
+		  "portofolio",
+		  "market-capital",
       ],
       app = [
         "app-profile",
@@ -104,7 +107,7 @@ class SideBar extends Component {
         "ui-modal",
         "ui-button-group",
         "ui-list-group",
-
+        
         "ui-card",
         "ui-carousel",
         "ui-dropdown",
@@ -123,8 +126,13 @@ class SideBar extends Component {
         "uc-noui-slider",
         "map-jqvmap",
         //"post",
+        
       ],
-      redux = ["todo", "form-redux", "form-redux-wizard"],
+        redux = [
+            "todo",
+            "form-redux",
+            "form-redux-wizard", 
+        ],
       widget = ["widget-basic"],
       forms = [
         "form-element",
@@ -134,7 +142,7 @@ class SideBar extends Component {
         "form-validation-jquery",
       ],
       table = [
-        "table-bootstrap-basic",
+        "table-bootstrap-basic", 
         "table-datatable-basic",
         "table-sorting",
         "table-filtering",
@@ -160,67 +168,39 @@ class SideBar extends Component {
     return (
       <div className="deznav">
         <PerfectScrollbar className="deznav-scroll">
-          <div className="main-profile">
-            <div className="image-bx">
-              <Link to="/app-profile">
-                <img src={profile} alt="" />
-              </Link>
+			<div className="main-profile">
+				<div className="image-bx">
+                  <Link to="/app-profile"><img src={profile} alt="" /></Link>
+				</div>
+				<h5 className="mb-0 fs-20 text-black "><span className="font-w400">Hello,</span> Nir</h5>
+				<p className="mb-0 fs-14 font-w400">nirjacob@mail.com</p>
             </div>
-            <h5 className="mb-0 fs-20 text-black ">
-              <span className="font-w400">Hello,</span> Yuval
-            </h5>
-            <p className="mb-0 fs-14 font-w400">yuvalbader96@mail.com</p>
-          </div>
           <MM className="metismenu" id="menu">
-            <li className="nav-label first">Main Menu</li>
+			<li className="nav-label first">Main Menu</li>
             <li className={`${dashBoard.includes(path) ? "mm-active" : ""}`}>
-              <Link className="has-arrow ai-icon" to="#">
-                <i className="flaticon-144-layout"></i>
-                <span className="nav-text">Dashboard</span>
-              </Link>
-              <ul>
-                <li>
-                  <Link
-                    className={`${path === "questionnaire" ? "mm-active" : ""}`}
-                    to="/questionnaire"
-                  >
-                    Questionnaire
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className={`${path === "portofolio" ? "mm-active" : ""}`}
-                    to="/portofolio"
-                  >
-                    Portofolio
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className={`${path === "app-profile" ? "mm-active" : ""}`}
-                    to="/app-profile"
-                  >
-                    Profile
-                  </Link>
-                </li>
-                {/*<li><Link className={`${path === "" ? "mm-active" : ""}`} to="/">Dashboard(WIP)</Link></li>*/}
-                {/*<li><Link className={`${path === "wallet" ? "mm-active" : ""}`} to="/my-wallets">Wallet(WIP)</Link></li>*/}
-                {/*<li><Link className={`${path === "market-capital" ? "mm-active" : ""}`} to="/market-capital">Market Capital(WIP)</Link></li>*/}
-                {/*  <li><Link className={`${path === "transactions" ? "mm-active" : ""}`} to="/transactions"> Transactions(WIP)</Link></li>*/}
-                {/*  <li><Link className={`${path === "coin-details" ? "mm-active" : ""}`} to="/coin-details"> Coin Details(WIP)</Link> </li>*/}
-              </ul>
+				<Link className="has-arrow ai-icon" to="#" >
+					<i className="flaticon-144-layout"></i>
+					<span className="nav-text">Dashboard</span>
+				</Link>
+				<ul >
+                    <li><Link className={`${path === "portofolio" ? "mm-active" : ""}`} to="/portofolio">Portofolio</Link></li>
+                    <li><Link className={`${path === "app-profile" ? "mm-active" : ""}`}  to="/app-profile">Profile</Link></li>
+                    <li><Link className={`${path === "questionnaire" ? "mm-active" : ""}`}  to="/questionnaire">Questionnaire</Link></li>
+                  {/*<li><Link className={`${path === "" ? "mm-active" : ""}`} to="/">Dashboard(WIP)</Link></li>*/}
+                  {/*<li><Link className={`${path === "wallet" ? "mm-active" : ""}`} to="/my-wallets">Wallet(WIP)</Link></li>*/}
+                  {/*<li><Link className={`${path === "market-capital" ? "mm-active" : ""}`} to="/market-capital">Market Capital(WIP)</Link></li>*/}
+                  {/*  <li><Link className={`${path === "transactions" ? "mm-active" : ""}`} to="/transactions"> Transactions(WIP)</Link></li>*/}
+                  {/*  <li><Link className={`${path === "coin-details" ? "mm-active" : ""}`} to="/coin-details"> Coin Details(WIP)</Link> </li>*/}
+                </ul>
             </li>
-            <li className={`${charts.includes(path) ? "mm-active" : ""}`}></li>
+            <li className={`${charts.includes(path) ? "mm-active" : ""}`}>
+            </li>
           </MM>
-          <div className="copyright">
-            <p className="fs-12">
-              <span className="heart"></span>
-            </p>
-            <p>
-              <strong>DeCrypto</strong> © 2022 All Rights Reserved
-            </p>
-          </div>
-        </PerfectScrollbar>
+			<div className="copyright">
+				<p className="fs-12"><span className="heart"></span></p>
+              <p><strong>DeCrypto</strong> © 2022 All Rights Reserved</p>
+			</div>
+			</PerfectScrollbar>
       </div>
     );
   }

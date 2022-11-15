@@ -71,7 +71,7 @@ const Header = ({ onNote }) => {
                 >
                   <img src={profile} width={20} alt="" />
                   <div className="header-info">
-                    <span>Yuval</span>
+                    <span>Johndoe</span>
                     <small>Super Admin</small>
                   </div>
                 </Dropdown.Toggle>
