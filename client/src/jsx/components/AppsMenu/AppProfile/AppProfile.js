@@ -50,11 +50,11 @@ const AppProfile = () => {
                 </div>
                 <div className="profile-details">
                   <div className="profile-name px-3 pt-2">
-                    <h4 className="text-primary mb-0">Yuval Bader</h4>
+                    <h4 className="text-primary mb-0">Nir Jacob</h4>
                     <p>Full-Stack Developer</p>
                   </div>
                   <div className="profile-email px-2 pt-2">
-                    <h4 className="text-muted mb-0">yuvalbader96@gmail.com</h4>
+                    <h4 className="text-muted mb-0">nirjacob@email.com</h4>
                     <p>Email</p>
                   </div>
                   <Dropdown className="dropdown ml-auto">
